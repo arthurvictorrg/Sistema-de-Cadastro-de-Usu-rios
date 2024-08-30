@@ -7,7 +7,6 @@ body{
     width: 300px;
     margin: auto;
     padding-top: 40px;
-    
 }
 
 .card{
@@ -24,6 +23,7 @@ body{
 
 .card-group{
     margin-bottom: 10px;
+    
 }
 
 .card-group > label{

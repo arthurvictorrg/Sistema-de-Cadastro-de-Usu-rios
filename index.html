@@ -1,43 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autenticação</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro de Usuários</title>
 </head>
 <body>
-    <form id="myusuarios">
-        <div class="myusuarios">
+    <div class="myusuarios">
+        <div class="card">
             <div class="card-top">
-                <img class="imglogin" src="css/img/voxatt.png" alt="">
-                <h2 class="title">Login:</h2>
+                <h2 class="title">Cadastro de Usuário</h2>
             </div>
-
-            <div class="card-group">
-            <label for="nome_usuario">Nome</label>
-            <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite seu nome" required>
-            </div>
-
-            <div class="card-group">
-            <label for="email_usuario">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
-            </div>
-
-            <div class="card-group">
-            <label for="senha_usuario">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-            </div>
-
-            <div class="card-group">
-                <label><input type="checkbox">Lembre-me</label>
+            <form id="cadastroForm" method="POST" action="php/processa_cadastro.php">
+                <div class="card-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
-
-            <div class="card-group btn">
-            <button type="submit">ENVIAR</button>
-            </div>
+                <div class="card-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="card-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required minlength="8">
+                </div>
+                <div class="card-group">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
         </div>
-    </form>
-    <script src="script.js"></script>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
